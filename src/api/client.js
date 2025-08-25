@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:8080/user", // adjust if needed
+  baseURL: "https://flaremind-backend.onrender.com/user", // adjust if needed
 });
 
 // 🔑 Add token automatically
@@ -18,3 +18,4 @@ client.interceptors.request.use(
 );
 
 export default client;
+
