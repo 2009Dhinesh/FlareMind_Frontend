@@ -1,14 +1,12 @@
-// api/client.js
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://flaremind-backend.onrender.com/user", // adjust if needed
+  baseURL: "https://flaremind-backend.onrender.com/user", 
 });
 
-// 🔑 Add token automatically
 client.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("token"); // or AsyncStorage in RN
+    const token = localStorage.getItem("token"); 
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -18,4 +16,5 @@ client.interceptors.request.use(
 );
 
 export default client;
+
 
