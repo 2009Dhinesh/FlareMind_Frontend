@@ -9,7 +9,7 @@ export default function Home() {
 
   const onLogout = async () => {
     try {
-      await client.post("/logout"); // ✅ Correct path
+      await client.post("/logout");
     } finally {
       logout();
       navigate("/login");
@@ -39,14 +39,14 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: "#1e293b", // dark blue-gray
+    background: "#1e293b", 
   },
   card: {
     width: "100%",
     maxWidth: "500px",
     padding: "30px",
     borderRadius: "12px",
-    background: "rgba(255, 255, 255, 0.05)", // glass effect
+    background: "rgba(255, 255, 255, 0.05)", 
     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
     backdropFilter: "blur(10px)",
     WebkitBackdropFilter: "blur(10px)",
@@ -69,7 +69,7 @@ const styles = {
   link: {
     padding: "10px 16px",
     borderRadius: "8px",
-    background: "#0ea5e9", // cyan-blue
+    background: "#0ea5e9", 
     color: "#fff",
     fontWeight: "600",
     textDecoration: "none",
@@ -79,10 +79,11 @@ const styles = {
     padding: "10px 16px",
     borderRadius: "8px",
     border: "none",
-    background: "#ef4444", // red
+    background: "#ef4444", 
     color: "#fff",
     fontWeight: "600",
     cursor: "pointer",
     transition: "0.3s",
   },
 };
+
