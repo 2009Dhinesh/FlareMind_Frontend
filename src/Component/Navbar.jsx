@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/nav.css";
 
-function BasicExample() {
+function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -40,4 +40,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Navbar;
