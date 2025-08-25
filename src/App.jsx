@@ -6,11 +6,13 @@ import Signup from "./Component/Signup";
 import Login from "./Component/Login";
 import Home from "./Component/Home";
 import Users from "./Component/Users";
+import Navbar from "./Component/Navbar";
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/signup" element={<Signup />} />
