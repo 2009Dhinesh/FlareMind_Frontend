@@ -70,14 +70,14 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    background: "#1e293b", 
+    background: "#1e293b", // dark blue-gray
   },
   card: {
     width: "100%",
     maxWidth: "400px",
     padding: "30px",
     borderRadius: "12px",
-    background: "rgba(255, 255, 255, 0.05)", 
+    background: "rgba(255, 255, 255, 0.05)", // glass effect
     boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.5)",
     backdropFilter: "blur(10px)",
     WebkitBackdropFilter: "blur(10px)",
@@ -89,7 +89,7 @@ const styles = {
     marginBottom: "20px",
     fontSize: "24px",
     fontWeight: "600",
-    color: "#fff", 
+    color: "#fff", // white text
   },
   form: {
     display: "flex",
@@ -110,7 +110,7 @@ const styles = {
     padding: "12px",
     border: "none",
     borderRadius: "10px",
-    background: "#0ea5e9",
+    background: "#0ea5e9", // cyan-blue
     color: "#fff",
     fontSize: "16px",
     fontWeight: "600",
@@ -128,4 +128,3 @@ const styles = {
     fontWeight: "600",
   },
 };
-
