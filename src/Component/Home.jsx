@@ -1,33 +1,13 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
-import client from "../api/client";
 
 export default function Home() {
-  const { auth, logout } = useAuth();
-  const navigate = useNavigate();
-
-  const onLogout = async () => {
-    try {
-      await client.post("/logout");
-    } finally {
-      logout();
-      navigate("/login");
-    }
-  };
+  const { auth } = useAuth();
 
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.title}>Welcome, {auth?.user?.firstname}</h1>
-        <nav style={styles.nav}>
-          <Link to="/users" style={styles.link}>
-            User Module
-          </Link>
-          <button onClick={onLogout} style={styles.button}>
-            Logout
-          </button>
-        </nav>
+        <h1 style={styles.title}>welcome to my website, {auth?.user?.firstname}</h1>
       </div>
     </div>
   );
@@ -59,31 +39,5 @@ const styles = {
     fontSize: "26px",
     fontWeight: "600",
     color: "#fff",
-  },
-  nav: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    marginTop: "15px",
-  },
-  link: {
-    padding: "10px 16px",
-    borderRadius: "8px",
-    background: "#0ea5e9", 
-    color: "#fff",
-    fontWeight: "600",
-    textDecoration: "none",
-    transition: "0.3s",
-  },
-  button: {
-    padding: "10px 16px",
-    borderRadius: "8px",
-    border: "none",
-    background: "#ef4444", 
-    color: "#fff",
-    fontWeight: "600",
-    cursor: "pointer",
-    transition: "0.3s",
-  },
+  }
 };
-
