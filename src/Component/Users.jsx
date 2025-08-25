@@ -3,7 +3,7 @@ import client from "../api/client";
 import { useAuth } from "../context/AuthContext";
 
 export default function Users() {
-  const { auth } = useAuth(); // ✅ get current user from context
+  const { auth } = useAuth(); 
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -12,7 +12,7 @@ export default function Users() {
     const loadUsers = async () => {
       try {
         setLoading(true);
-        const { data } = await client.get("/others"); // token will be sent via axios interceptor
+        const { data } = await client.get("/others"); 
         if (data.success) {
           setUsers(data.users);
         } else {
@@ -77,7 +77,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: "#1e293b", // dark background
+    background: "#1e293b",
     color: "#fff",
   },
   card: {
@@ -109,7 +109,7 @@ const styles = {
     padding: "12px 16px",
     marginBottom: "20px",
     borderRadius: "8px",
-    background: "rgba(34,197,94,0.2)", // green shade for current user
+    background: "rgba(34,197,94,0.2)",
     color: "#fff",
   },
   list: {
@@ -140,3 +140,4 @@ const styles = {
     textAlign: "right",
   },
 };
+
