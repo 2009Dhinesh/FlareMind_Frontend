@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://flaremind-backend.onrender.com/user", 
+  baseURL: "https://flaremind-backend.onrender.com", 
 });
 
 client.interceptors.request.use(
@@ -16,6 +16,7 @@ client.interceptors.request.use(
 );
 
 export default client;
+
 
 
 
