@@ -13,7 +13,7 @@ export default function Login() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await client.post("/signin", form);
+      const { data } = await client.post("/user/signin", form);
 
       if (data.message === "Login successful") {
         login({ user: data.user, token: data.token });
@@ -128,3 +128,4 @@ const styles = {
     fontWeight: "600",
   },
 };
+
